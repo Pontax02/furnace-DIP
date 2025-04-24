@@ -36,4 +36,10 @@ public class GasHeaterTest {
         roomTemperature.heatRoom(-400);
         assertEquals(-400, roomTemperature.getTemperature(), 0.001);
     }
+    @Test
+    public void heatTemperatureTest() {
+        GasHeater heater = new GasHeater();
+        heater.engage(roomTemperature);
+        assertEquals(1,roomTemperature.getTemperature(), 0.001);
+    }
 }
