@@ -28,4 +28,12 @@ public class GasHeaterTest {
     assertEquals(roomTemperature, roomTemperature.getInstance());
 
     }
+
+    @Test
+    public void roomTemperatureTest() {
+        roomTemperature.heatRoom(200);
+        assertEquals(200, roomTemperature.getTemperature(), 0.001);
+        roomTemperature.heatRoom(-400);
+        assertEquals(-400, roomTemperature.getTemperature(), 0.001);
+    }
 }
